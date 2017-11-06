@@ -16,7 +16,7 @@ Gem::Specification.new do |gem|
   gem.require_paths = ["lib"]
   gem.files = Dir[
     "{lib}/**/*",
-    "UNLICENSED.md",
+    "MIT-LICENSE",
     "CHANGELOG.md",
     "README.md"
   ]
