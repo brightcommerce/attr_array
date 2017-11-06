@@ -18,11 +18,23 @@ AttrArray is developed as a ActiveRecord model concern, therefore it is dependen
 
 ## How To Use
 
+To add AttrArray to a model, include the concern:
+
+```ruby
+class Post < ActiveRecord::Base
+  include AttrArray
+
+  attr_array :tags
+end
+```
+
 To autoload AttrArray for all models, add the following to an initializer:
 
 ```ruby
 require 'attr_array/active_record'
 ```
+
+You then don't need to `include AttrArray` in any model.
 
 ### Scopes
 
@@ -42,6 +54,8 @@ all_#{tag_name}
 
 ### Setup
 
+Add the model attributes you want to use with AttrArray in your migration:
+
 ```ruby
 class CreatePost < ActiveRecord::Migration[5.1]
   def change
@@ -52,8 +66,14 @@ class CreatePost < ActiveRecord::Migration[5.1]
     end
   end
 end
+```
 
+You can nominate multiple attributes in the `attr_array` class method:
+
+```ruby
 class Post < ApplicationRecord
+  include AttrArray
+
   attr_array :tags, :authors
 end
 ```
