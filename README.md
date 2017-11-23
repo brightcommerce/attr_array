@@ -7,7 +7,7 @@ A high performance ActiveRecord concern for Rails using the PostgreSQL array typ
 To install add the line to your Gemfile:
 
 ```ruby
-gem 'attr_array', git: 'https://github.com/brightcommerce/attr_array'
+gem 'attr_array'
 ```
 
 And `bundle install`.
@@ -96,4 +96,4 @@ This gem is maintained by [Jurgen Jocubeit](https://github.com/JurgenJocubeit).
 
 ## Copyright
 
-Copyright 2017 Pocket Business Co. All rights reserved.
+Copyright 2017 Brightcommerce, Inc. All rights reserved.
